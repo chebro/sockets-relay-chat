@@ -1,0 +1,31 @@
+SOCKETS RELAY CHAT
+==================
+
+A simple sockets based chat server and client written in javascript.
+
+
+SERVER
+------
+
+The server accepts connections from multiple clients and relays messages from the sender to the rest connected clients.
+The client messages can be in either of the following two forms:
+
+    1. /USERNAME <%s>: server sets the username as the first argument
+    2. /MESSAGES <%s>: server relays the message to other connected clients
+  
+The server listens for new connections on port 8080, to start the server run
+
+    node server.js
+
+
+CLIENT
+------
+
+The client opens a unique connection to the server and creates a command line interface for the user.
+A prompt is called to accept input from the user, which is sent to the server.
+
+The client attempts to connect to port 8080, to start the client run
+  
+    node client.js <SERVER_IP> <USERNAME>
+
+
